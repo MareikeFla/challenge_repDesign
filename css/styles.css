@@ -62,7 +62,7 @@ h1 {
 .box--one {
   background-color: lightblue;
 
-  width: 100px;
+  width: 70%;
   height: 100px;
 }
 
@@ -73,11 +73,30 @@ h1 {
   height: 100px;
 }
 
+@media screen and (min-width: 600px) {
+  .box--two {
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .box--two {
+    width: 400px;
+  }
+}
+
 .box--three {
   background-color: lightpink;
 
   width: 50px;
   height: 250px;
+}
+
+@media screen and (orientation: landscape) {
+  .box--three {
+    height: 50px;
+    width: 250px;
+  }
 }
 
 .box--four {
@@ -87,10 +106,46 @@ h1 {
   height: 100px;
 }
 
+@media screen and (prefers-color-scheme: dark) {
+  .box--four {
+    background-color: #ff4a11;
+  }
+}
+
 .box--five {
   width: 100%;
 }
 
 .box--five img {
   width: 100%;
+}
+
+@media screen and (max-width: 599px) {
+  .box--five .medium {
+    display: none;
+  }
+
+  .box--five .large {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1199px) {
+  .box--five .small {
+    display: none;
+  }
+
+  .box--five .large {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .box--five .small {
+    display: none;
+  }
+
+  .box--five .medium {
+    display: none;
+  }
 }
